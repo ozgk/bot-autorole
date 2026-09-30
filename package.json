@@ -1,0 +1,21 @@
+{
+  "name": "panela-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bot de Discord com cargo automatico na entrada (autorole), configuracao por comando e lock/unlock de canais.",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "test": "node scripts/smoke-test.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7"
+  }
+}

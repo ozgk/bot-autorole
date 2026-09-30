@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: panela-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
+    autoDeploy: true
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: PREFIX
+        value: "!"
+      - key: OWNER_IDS
+        sync: false
+      - key: DEV_GUILD_ID
+        sync: false
